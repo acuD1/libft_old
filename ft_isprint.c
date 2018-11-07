@@ -6,8 +6,11 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:09:29 by arsciand          #+#    #+#             */
-/*   Updated: 2018/10/14 19:09:33 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/07 16:25:44 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+int		ft_isprint(int c)
+{
+	return (c >= 32 && c <= 126 ? 1 : 0);
+}
