@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/14 19:13:52 by arsciand          #+#    #+#             */
-/*   Updated: 2018/10/19 21:40:25 by arsciand         ###   ########.fr       */
+/*   Created: 2018/11/06 13:00:44 by arsciand          #+#    #+#             */
+/*   Updated: 2018/11/07 09:23:06 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t  ft_strlen(char const *s)
+size_t	ft_strlen(char const *s)
 {
-    return (*s ? ft_strlen(++s) + 1: 0);
+	return (*s ? ft_strlen(++s) + 1 : 0);
 }

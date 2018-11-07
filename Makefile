@@ -43,7 +43,7 @@ endif
 # Programms names
 
 NAME = libft.a
-TNAME = libft_test.c
+TNAME = Libft_test
 
 # Dir/Files Path
 
@@ -55,70 +55,70 @@ O_PATH = ./build/objs/
 
 # Files
 
-SRC += $(S_PATH)ft_atoi.c
-SRC += $(S_PATH)ft_bzero.c
-SRC += $(S_PATH)ft_isalnum.c
-SRC += $(S_PATH)ft_isalpha.c
-SRC += $(S_PATH)ft_isascii.c
-SRC += $(S_PATH)ft_isdigit.c
-SRC += $(S_PATH)ft_isprint.c
-SRC += $(S_PATH)ft_itoa.c
-SRC += $(S_PATH)ft_lstadd.c
-SRC += $(S_PATH)ft_lstdel.c
-SRC += $(S_PATH)ft_lstdelone.c
-SRC += $(S_PATH)ft_lstiter.c
-SRC += $(S_PATH)ft_lstmap.c
-SRC += $(S_PATH)ft_lstnew.c
-SRC += $(S_PATH)ft_memalloc.c
-SRC += $(S_PATH)ft_memchr.c
-SRC += $(S_PATH)ft_memcpm.c
-SRC += $(S_PATH)ft_memcpy.c
-SRC += $(S_PATH)ft_memdel.c
-SRC += $(S_PATH)ft_memove.c
-SRC += $(S_PATH)ft_memset.c
-SRC += $(S_PATH)ft_putchar_fd.c
+#SRC += $(S_PATH)ft_atoi.c
+#SRC += $(S_PATH)ft_bzero.c
+#SRC += $(S_PATH)ft_isalnum.c
+#SRC += $(S_PATH)ft_isalpha.c
+#SRC += $(S_PATH)ft_isascii.c
+#SRC += $(S_PATH)ft_isdigit.c
+#SRC += $(S_PATH)ft_isprint.c
+#SRC += $(S_PATH)ft_itoa.c
+#SRC += $(S_PATH)ft_lstadd.c
+#SRC += $(S_PATH)ft_lstdel.c
+#SRC += $(S_PATH)ft_lstdelone.c
+#SRC += $(S_PATH)ft_lstiter.c
+#SRC += $(S_PATH)ft_lstmap.c
+#SRC += $(S_PATH)ft_lstnew.c
+#SRC += $(S_PATH)ft_memalloc.c
+#SRC += $(S_PATH)ft_memchr.c
+#SRC += $(S_PATH)ft_memcpm.c
+#SRC += $(S_PATH)ft_memcpy.c
+#SRC += $(S_PATH)ft_memdel.c
+#SRC += $(S_PATH)ft_memove.c
+#SRC += $(S_PATH)ft_memset.c
+#SRC += $(S_PATH)ft_putchar_fd.c
 SRC += $(S_PATH)ft_putchar.c
-SRC += $(S_PATH)ft_putendl_fd.c
-SRC += $(S_PATH)ft_putendl.c
-SRC += $(S_PATH)ft_putnbr_fd.c
-SRC += $(S_PATH)ft_putnbr.c
-SRC += $(S_PATH)ft_putstr_fd.c
-SRC += $(S_PATH)ft_putstr.c
-SRC += $(S_PATH)ft_strcat.c
-SRC += $(S_PATH)ft_strchr.c
-SRC += $(S_PATH)ft_strclr.c
-SRC += $(S_PATH)ft_strcmp.c
-SRC += $(S_PATH)ft_strcpy.c
-SRC += $(S_PATH)ft_strdel.c
-SRC += $(S_PATH)ft_strdup.c
-SRC += $(S_PATH)ft_strequ.c
-SRC += $(S_PATH)ft_striter.c
-SRC += $(S_PATH)ft_striteri.c
-SRC += $(S_PATH)ft_strjoin.c
-SRC += $(S_PATH)ft_strlcat.c
+#SRC += $(S_PATH)ft_putendl_fd.c
+#SRC += $(S_PATH)ft_putendl.c
+#SRC += $(S_PATH)ft_putnbr_fd.c
+#SRC += $(S_PATH)ft_putnbr.c
+#SRC += $(S_PATH)ft_putstr_fd.c
+#SRC += $(S_PATH)ft_putstr.c
+#SRC += $(S_PATH)ft_strcat.c
+#SRC += $(S_PATH)ft_strchr.c
+#SRC += $(S_PATH)ft_strclr.c
+#SRC += $(S_PATH)ft_strcmp.c
+#SRC += $(S_PATH)ft_strcpy.c
+#SRC += $(S_PATH)ft_strdel.c
+#SRC += $(S_PATH)ft_strdup.c
+#SRC += $(S_PATH)ft_strequ.c
+#SRC += $(S_PATH)ft_striter.c
+#SRC += $(S_PATH)ft_striteri.c
+#SRC += $(S_PATH)ft_strjoin.c
+#SRC += $(S_PATH)ft_strlcat.c
 SRC += $(S_PATH)ft_strlen.c
-SRC += $(S_PATH)ft_strmap.c
-SRC += $(S_PATH)ft_strmapi.c
-SRC += $(S_PATH)ft_strncat.c
-SRC += $(S_PATH)ft_strncmp.c
-SRC += $(S_PATH)ft_strncpy.c
-SRC += $(S_PATH)ft_strnequ.c
-SRC += $(S_PATH)ft_strnew.c
-SRC += $(S_PATH)ft_strnstr.c
-SRC += $(S_PATH)ft_strrchr.c
-SRC += $(S_PATH)ft_strsplit.c
-SRC += $(S_PATH)ft_strstr.c
-SRC += $(S_PATH)ft_strsub.c
-SRC += $(S_PATH)ft_strtrim.c
-SRC += $(S_PATH)ft_tolower.c
-SRC += $(S_PATH)ft_toupper.c
+#SRC += $(S_PATH)ft_strmap.c
+#SRC += $(S_PATH)ft_strmapi.c
+#SRC += $(S_PATH)ft_strncat.c
+#SRC += $(S_PATH)ft_strncmp.c
+#SRC += $(S_PATH)ft_strncpy.c
+#SRC += $(S_PATH)ft_strnequ.c
+#SRC += $(S_PATH)ft_strnew.c
+#SRC += $(S_PATH)ft_strnstr.c
+#SRC += $(S_PATH)ft_strrchr.c
+#SRC += $(S_PATH)ft_strsplit.c
+#SRC += $(S_PATH)ft_strstr.c
+#SRC += $(S_PATH)ft_strsub.c
+#SRC += $(S_PATH)ft_strtrim.c
+#SRC += $(S_PATH)ft_tolower.c
+#SRC += $(S_PATH)ft_toupper.c
 OBJ = $(patsubst $(S_PATH)%.c, $(O_PATH)%.o, $(SRC))
 HDR = -I $(H_PATH)
 
 # Variables
 
-CLANG = clang
-COMPL = $(CLANG) -c
+C_GCC = gcc
+COMPL = $(C_GCC) -c
 BUILD = $(B_PATH) $(O_PATH)
 AR_RC = ar rc
 RANLI = ranlib
@@ -200,17 +200,14 @@ fclean:
 
 test:
 	@$(TESTR)
-	@$(shell wget -qN "https://raw.githubusercontent.com/acuD1/Lib_test/master/$(TNAME)")
+	@git clone -q https://github.com/acuD1/$(TNAME).git $(B_PATH)test
 	@$(ECHO) $(DLSHW) $(TNAME)
-	@$(CLANG) $(CFLAG) -o $@ $(TNAME) $(NAME)
-	@$(RM_RF) $(TNAME)
-	@$(ECHO) $(GCFIL) $(TNAME)
-	@$(ECHO) $(EXSHW) $@
-	@./$@
-	@$(RM_RF) $@
+	@echo "$(Y_C)STILL IN BETA : Go to build/test and modify Makefile \
+		manually fear each test_*.c and run make re$(RESET_C)"
 	@$(ECHO) $(TESTD)
 
+
 re:
-	@$(MAKE) --no-print-directory fclean all
+	@$(MAKE) --no-print-directory fclean all clean
 
 endif
