@@ -6,9 +6,11 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:07:56 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/07 18:10:52 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/08 11:26:30 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int		ft_atoi(const char *s)
 {

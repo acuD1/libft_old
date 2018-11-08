@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:13:24 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/07 18:10:11 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/08 14:51:32 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,12 @@
 char	*ft_strdup(const char *s)
 {
 	size_t	i;
+	size_t	len;
 	char	*d;
 
 	i = 0;
-	if (!(d = (char *)malloc(sizeof(char) * ft_strlen(s + 1))))
+	len = ft_strlen(s);
+	if (!(d = (char *)malloc(sizeof(char) * (len + 1))))
 		return (0);
 	while (s[i])
 	{

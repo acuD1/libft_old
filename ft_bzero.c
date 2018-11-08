@@ -6,8 +6,13 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:08:43 by arsciand          #+#    #+#             */
-/*   Updated: 2018/10/15 19:58:29 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/08 15:15:45 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
+{
+	ft_memset(s, 0, n);
+}

@@ -5,14 +5,9 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/14 19:12:24 by arsciand          #+#    #+#             */
-/*   Updated: 2018/10/16 14:51:37 by arsciand         ###   ########.fr       */
+/*   Created: 2018/11/08 11:25:38 by arsciand          #+#    #+#             */
+/*   Updated: 2018/11/08 11:26:07 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void    ft_putstr(char const *s)
-{
-    write(1, s, ft_strlen(s));
-}
