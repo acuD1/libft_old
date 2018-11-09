@@ -6,8 +6,15 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 11:25:38 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/08 11:26:07 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/09 09:43:34 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
+
+void	ft_putstr(char const *s)
+{
+	if (s)
+		write(1, s, ft_strlen(s));
+}
