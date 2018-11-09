@@ -6,8 +6,13 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:15:13 by arsciand          #+#    #+#             */
-/*   Updated: 2018/10/14 19:15:17 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/09 13:30:04 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int		ft_tolower(int c)
+{
+	return (c >= 'A' && c <= 'Z' ? c += 32 : c);
+}

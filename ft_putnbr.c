@@ -6,8 +6,30 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:12:12 by arsciand          #+#    #+#             */
-/*   Updated: 2018/10/14 19:12:14 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/09 16:16:17 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
+
+void	ft_putnbr(int n)
+{
+	if (n == -2147483648)
+		write(1, "-2147483648", 11);
+	if (n < 0)
+	{
+		write(1, "-", 1);
+		n = -n;
+	}
+	if (n >= 10)
+	{
+		ft_putnbr(n / 10);
+		ft_putnbr(n % 10);
+	}
+	else
+	{
+		n += '0';
+		write(1, &n, 1);
+	}
+}

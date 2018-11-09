@@ -6,8 +6,14 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:11:37 by arsciand          #+#    #+#             */
-/*   Updated: 2018/10/14 19:11:40 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/09 15:43:58 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
+
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
+}
