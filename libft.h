@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 11:08:12 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/09 16:50:04 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/10 17:07:56 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <string.h>
 
 /*
-***		Part I
+**		Part I
 */
 
 int		ft_atoi(const char *s);
@@ -51,7 +51,7 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 
 /*
-***		Part II
+**		Part II
 */
 
 void	*ft_memalloc(size_t size);
@@ -64,13 +64,24 @@ void	ft_putnbr_fd(int n, int fd);
 void	ft_putnbr(int nb);
 void	ft_putstr_fd(const char *s, int fd);
 void	ft_putstr(char const *s);
+void	ft_strclr(char *s);
+void	ft_strdel(char **as);
+int		ft_strequ(char const *s1, char const *s2);
+void	ft_striter(char *s, void (*f)(char *));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+char	*ft_strjoin(const char *s1, const char *s2);
+char	*ft_strmap(char const *s, char (*f)(char));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+int		ft_strnequ(char const *s1, char const *s2, size_t n);
+char	*ft_strnew(size_t size);
+char	*ft_strsub(const char *s, unsigned int start, size_t len);
 
 /*
-***		BONUS
+**		BONUS
 */
 
 /*
-***		My fonctions
+**		My fonctions
 */
 
 size_t	ft_strnlen(const char *s, size_t len);

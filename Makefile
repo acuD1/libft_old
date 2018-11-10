@@ -84,7 +84,7 @@ SRC += $(S_PATH)ft_strstr.c
 SRC += $(S_PATH)ft_strrchr.c
 SRC += $(S_PATH)ft_tolower.c
 SRC += $(S_PATH)ft_toupper.c
-##Part II
+## Part II
 #SRC += $(S_PATH)ft_itoa.c
 #SRC += $(S_PATH)ft_lstadd.c
 #SRC += $(S_PATH)ft_lstdel.c
@@ -102,18 +102,18 @@ SRC += $(S_PATH)ft_putnbr_fd.c
 SRC += $(S_PATH)ft_putnbr.c
 SRC += $(S_PATH)ft_putstr_fd.c
 SRC += $(S_PATH)ft_putstr.c
-#SRC += $(S_PATH)ft_strclr.c
-#SRC += $(S_PATH)ft_strdel.c
-#SRC += $(S_PATH)ft_strequ.c
-#SRC += $(S_PATH)ft_striter.c
-#SRC += $(S_PATH)ft_striteri.c
-#SRC += $(S_PATH)ft_strjoin.c
-#SRC += $(S_PATH)ft_strmap.c
-#SRC += $(S_PATH)ft_strmapi.c
-#SRC += $(S_PATH)ft_strnequ.c
-#SRC += $(S_PATH)ft_strnew.c
+SRC += $(S_PATH)ft_strclr.c
+SRC += $(S_PATH)ft_strdel.c
+SRC += $(S_PATH)ft_strequ.c
+SRC += $(S_PATH)ft_striter.c
+SRC += $(S_PATH)ft_striteri.c
+SRC += $(S_PATH)ft_strjoin.c
+SRC += $(S_PATH)ft_strmap.c
+SRC += $(S_PATH)ft_strmapi.c
+SRC += $(S_PATH)ft_strnequ.c
+SRC += $(S_PATH)ft_strnew.c
 #SRC += $(S_PATH)ft_strsplit.c
-#SRC += $(S_PATH)ft_strsub.c
+SRC += $(S_PATH)ft_strsub.c
 #SRC += $(S_PATH)ft_strtrim.c
 ##Part Bonus
 ##Part my functions

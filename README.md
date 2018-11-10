@@ -1,1 +1,1 @@
-Libft project, arsciand @ 42
+Libft project - arsciand @ 42

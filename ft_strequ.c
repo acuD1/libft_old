@@ -6,8 +6,13 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:13:28 by arsciand          #+#    #+#             */
-/*   Updated: 2018/10/14 19:13:30 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/10 16:31:54 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int		ft_strequ(char const *s1, char const *s2)
+{
+	return (s1 && s2 && ft_strcmp(s1, s2) == 0 ? 1 : 0);
+}

@@ -6,8 +6,15 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:13:32 by arsciand          #+#    #+#             */
-/*   Updated: 2018/10/14 19:13:34 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/10 14:59:51 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	ft_striter(char *s, void (*f)(char *))
+{
+	if (s && f)
+		while (*s)
+			f(s++);
+}
