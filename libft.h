@@ -6,14 +6,12 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 11:08:12 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/10 17:07:56 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/10 19:08:40 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-
-# define INTMIN 217
 
 # include <string.h>
 
