@@ -86,12 +86,6 @@ SRC += $(S_PATH)ft_tolower.c
 SRC += $(S_PATH)ft_toupper.c
 ## Part II
 #SRC += $(S_PATH)ft_itoa.c
-#SRC += $(S_PATH)ft_lstadd.c
-#SRC += $(S_PATH)ft_lstdel.c
-#SRC += $(S_PATH)ft_lstdelone.c
-#SRC += $(S_PATH)ft_lstiter.c
-#SRC += $(S_PATH)ft_lstmap.c
-#SRC += $(S_PATH)ft_lstnew.c
 SRC += $(S_PATH)ft_memalloc.c
 SRC += $(S_PATH)ft_memdel.c
 SRC += $(S_PATH)ft_putchar_fd.c
@@ -112,12 +106,20 @@ SRC += $(S_PATH)ft_strmap.c
 SRC += $(S_PATH)ft_strmapi.c
 SRC += $(S_PATH)ft_strnequ.c
 SRC += $(S_PATH)ft_strnew.c
-#SRC += $(S_PATH)ft_strsplit.c
+SRC += $(S_PATH)ft_strsplit.c
 SRC += $(S_PATH)ft_strsub.c
-#SRC += $(S_PATH)ft_strtrim.c
-##Part Bonus
-##Part my functions
+SRC += $(S_PATH)ft_strtrim.c
+## Part Bonus
+#SRC += $(S_PATH)ft_lstadd.c
+#SRC += $(S_PATH)ft_lstdel.c
+#SRC += $(S_PATH)ft_lstdelone.c
+#SRC += $(S_PATH)ft_lstiter.c
+#SRC += $(S_PATH)ft_lstmap.c
+#SRC += $(S_PATH)ft_lstnew.c
+## Part my functions
+SRC += $(S_PATH)ft_isspace.c
 SRC += $(S_PATH)ft_strnlen.c
+SRC += $(S_PATH)ft_strrev.c
 
 OBJ = $(patsubst $(S_PATH)%.c, $(O_PATH)%.o, $(SRC))
 HDR = -I $(H_PATH)

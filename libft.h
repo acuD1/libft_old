@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 11:08:12 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/10 19:08:40 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/11 17:06:47 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ int		ft_toupper(int c);
 **		Part II
 */
 
+//char	*ft_itoa(int n);
 void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);
 void	ft_putchar_fd(char c, int fd);
@@ -72,7 +73,9 @@ char	*ft_strmap(char const *s, char (*f)(char));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int		ft_strnequ(char const *s1, char const *s2, size_t n);
 char	*ft_strnew(size_t size);
+char	**ft_strsplit(const char *s, char c);
 char	*ft_strsub(const char *s, unsigned int start, size_t len);
+char	*ft_strtrim(const char *s);
 
 /*
 **		BONUS
@@ -82,6 +85,8 @@ char	*ft_strsub(const char *s, unsigned int start, size_t len);
 **		My fonctions
 */
 
+int		ft_isspace(int c);
 size_t	ft_strnlen(const char *s, size_t len);
+char	*ft_strrev(char *s);
 
 #endif

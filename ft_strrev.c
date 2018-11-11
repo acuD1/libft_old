@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/14 19:12:12 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/11 16:53:44 by arsciand         ###   ########.fr       */
+/*   Created: 2018/11/11 15:51:19 by arsciand          #+#    #+#             */
+/*   Updated: 2018/11/11 16:11:29 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
-void	ft_putnbr(int n)
+char	*ft_strrev(char *s)
 {
-	if (n == -2147483648)
-		write(1, "-2147483648", 11);
-	if (n < 0)
+	size_t	len;
+	size_t	i;
+	char	tmp;
+
+	i = 0;
+	len = ft_strlen(s) - 1;
+	while (i < len)
 	{
-		write(1, "-", 1);
-		n = -n;
+		tmp = s[len];
+		s[len] = s[i];
+		s[i] = tmp;
+		i++;
+		len--;
 	}
-	if (n >= 10)
-	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
-	}
-	else
-	{
-		n += '0';
-		write(1, &n, 1);
-	}
+	return (s);
 }
