@@ -85,7 +85,7 @@ SRC += $(S_PATH)ft_strrchr.c
 SRC += $(S_PATH)ft_tolower.c
 SRC += $(S_PATH)ft_toupper.c
 ## Part II
-#SRC += $(S_PATH)ft_itoa.c
+SRC += $(S_PATH)ft_itoa.c
 SRC += $(S_PATH)ft_memalloc.c
 SRC += $(S_PATH)ft_memdel.c
 SRC += $(S_PATH)ft_putchar_fd.c
@@ -150,7 +150,7 @@ CLSUC = "$(R_C)====>\tCleanup\t\t SUCCESS$(RESET_C)"
 FCRUN = echo "$(R_C)===========>\tForce Cleanup\t RUNNING$(RESET_C)"
 FCSUC = "$(R_C)====>\tForce Cleanup\t SUCCESS$(RESET_C)"
 NORMR = echo "$(Y_C)===========>\tNorminette\t RUNNING$(RESET_C)"
-NORMD = "$(G_C)====>\tNorminette\t\t DONE$(RESET_C)"
+NORMD = "$(G_C)====>\tNorminette\t DONE$(RESET_C)"
 TESTR = echo "$(M_C)===========>\tTESTS\t\t RUNNING$(RESET_C)"
 TESTD = "$(M_C)====>\tTESTS\t\t DONE$(RESET_C)"
 

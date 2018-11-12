@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 11:08:12 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/11 17:06:47 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/12 14:33:21 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int		ft_toupper(int c);
 **		Part II
 */
 
-//char	*ft_itoa(int n);
+char	*ft_itoa(int n);
 void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);
 void	ft_putchar_fd(char c, int fd);

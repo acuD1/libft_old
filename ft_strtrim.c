@@ -6,11 +6,16 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:15:06 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/11 15:43:53 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/12 16:48:48 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	ft_iswhitespace(int c)
+{
+	return (c == ' ' || c == '\t' || c == '\n' ? 1 : 0);
+}
 
 char		*ft_strtrim(const char *s)
 {
@@ -21,9 +26,9 @@ char		*ft_strtrim(const char *s)
 	{
 		i = 0;
 		len = ft_strlen(s);
-		while (s && ft_isspace(s[i]))
+		while (s && ft_iswhitespace(s[i]))
 			i++;
-		while (len > i && ft_isspace(s[len - 1]))
+		while (len > i && ft_iswhitespace(s[len - 1]))
 			len--;
 		return (ft_strsub(s, i, len - i));
 	}
