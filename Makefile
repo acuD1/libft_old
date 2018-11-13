@@ -43,6 +43,7 @@ endif
 # Programms names
 
 NAME = libft.a
+HNAME = libft.h
 TNAME = Libft_test
 
 # Dir/Files Path
@@ -186,7 +187,7 @@ $(O_PATH):
 
 norme:
 	@$(NORMR)
-	@$(NORME) $(SRC) $(H_PATH)%.h
+	@$(NORME) $(SRC) $(H_PATH)$(HNAME)
 	@$(ECHO) $(NORMD)
 
 clean:

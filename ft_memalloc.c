@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:10:54 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/10 13:39:45 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/13 11:01:43 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,10 @@ void	*ft_memalloc(size_t size)
 {
 	void *mem;
 
-	if (size)
-	{
-		if (!(mem = (void *)malloc(size)))
-			return (NULL);
-		ft_bzero(mem, size);
-		return (mem);
-	}
-	return (NULL);
+	if (!size)
+		return (NULL);
+	if (!(mem = (void *)malloc(size)))
+		return (NULL);
+	ft_bzero(mem, size);
+	return (mem);
 }

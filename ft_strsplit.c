@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:14:54 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/11 15:38:19 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/13 11:14:13 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,57 +32,31 @@ static size_t	count_words(const char *s, char c)
 	return (n_words);
 }
 
-static void		do_print(const char *s, char *tab, size_t i, size_t j)
+char			**ft_strsplit(char const *s, char c)
 {
-	size_t i_words;
-
-	i_words = 0;
-	while (i_words < j)
-	{
-		tab[i_words] = s[i + i_words];
-		i_words++;
-	}
-	tab[i_words] = '\0';
-}
-
-static void		do_split(const char *s, char **tab, char c, size_t i)
-{
-	size_t j;
-	size_t i_words;
-
-	i_words = 0;
-	while (s[i])
-	{
-		while (s[i] == c && s[i])
-			i++;
-		if (s[i])
-		{
-			j = 0;
-			while (s[i + j] != c && s[i + j])
-				j++;
-			if (!(tab[i_words] = malloc(sizeof(char) * (j + 1))))
-				return ;
-			do_print(s, tab[i_words], i, j);
-			i += j;
-			i_words++;
-		}
-	}
-	tab[i_words] = NULL;
-}
-
-char			**ft_strsplit(const char *s, char c)
-{
-	size_t	n_words;
+	int		i;
+	int		len;
+	int		j;
 	char	**tab;
 
-	tab = NULL;
-	if (s && c)
+	if (!c || !s)
+		return (NULL);
+	if (!(tab = (char**)malloc(sizeof(tab) * (count_words(s, c) + 1))))
+		return (NULL);
+	i = 0;
+	len = 0;
+	j = 0;
+	if (!tab)
+		return (NULL);
+	while (s[i])
 	{
-		n_words = count_words(s, c);
-		if (!(tab = malloc(sizeof(char *) * (n_words + 1))))
-			return (NULL);
-		do_split(s, tab, c, 0);
-		return (tab);
+		while (s[i + len] && s[i + len] != c)
+			len++;
+		if (len)
+			tab[j++] = ft_strsub(s, i, len);
+		i += len ? len : 1;
+		len = 0;
 	}
-	return (NULL);
+	tab[j] = NULL;
+	return (tab);
 }

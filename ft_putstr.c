@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 11:25:38 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/09 16:18:02 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/13 11:03:50 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 void	ft_putstr(char const *s)
 {
-	if (s)
-		write(1, s, ft_strlen(s));
+	if (!s)
+		return ;
+	write(1, s, ft_strlen(s));
 }

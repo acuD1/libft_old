@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:12:48 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/10 14:48:48 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/13 11:04:20 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	ft_strclr(char *s)
 {
-	if (s)
-		ft_bzero(s, ft_strlen(s));
+	if (!s)
+		return ;
+	ft_bzero(s, ft_strlen(s));
 }

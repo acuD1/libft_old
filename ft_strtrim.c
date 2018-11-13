@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:15:06 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/12 16:48:48 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/13 11:16:13 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,16 @@ static int	ft_iswhitespace(int c)
 
 char		*ft_strtrim(const char *s)
 {
-	size_t	i;
-	size_t	len;
+	size_t i;
+	size_t len;
 
-	if (s)
-	{
-		i = 0;
-		len = ft_strlen(s);
-		while (s && ft_iswhitespace(s[i]))
-			i++;
-		while (len > i && ft_iswhitespace(s[len - 1]))
-			len--;
-		return (ft_strsub(s, i, len - i));
-	}
-	return (NULL);
+	if (!s)
+		return (NULL);
+	i = 0;
+	len = ft_strlen(s);
+	while (s && ft_iswhitespace(s[i]))
+		i++;
+	while (len > i && ft_iswhitespace(s[len - 1]))
+		len--;
+	return (ft_strsub(s, i, len - i));
 }
