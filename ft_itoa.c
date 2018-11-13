@@ -6,18 +6,18 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:09:37 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/13 10:28:38 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/13 11:48:48 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static char		*ft_strlendup(char *s, size_t len)
 {
 	char	*dst;
 
-	dst = ft_memalloc(sizeof(char) * (len));
+	if (!(dst = (char *)ft_memalloc(sizeof(char) * (len))))
+		return (NULL);
 	ft_strcpy(dst, s);
 	return (dst);
 }

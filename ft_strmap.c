@@ -6,12 +6,11 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:13:57 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/10 15:45:26 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/13 11:49:23 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strmap(const char *s, char (*f)(char))
 {
@@ -23,7 +22,7 @@ char	*ft_strmap(const char *s, char (*f)(char))
 	if (!s)
 		return (NULL);
 	len = ft_strlen(s);
-	if (!(dst = (char *)malloc(sizeof(char) * (len + 1))))
+	if (!(dst = (char *)ft_memalloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	while (s[i])
 	{

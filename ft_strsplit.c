@@ -6,12 +6,11 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:14:54 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/13 11:14:13 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/13 11:51:09 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static size_t	count_words(const char *s, char c)
 {
@@ -39,13 +38,13 @@ char			**ft_strsplit(char const *s, char c)
 	int		j;
 	char	**tab;
 
+	i = 0;
+	j = 0;
+	len = 0;
 	if (!c || !s)
 		return (NULL);
-	if (!(tab = (char**)malloc(sizeof(tab) * (count_words(s, c) + 1))))
+	if (!(tab = (char**)ft_memalloc(sizeof(tab) * (count_words(s, c) + 1))))
 		return (NULL);
-	i = 0;
-	len = 0;
-	j = 0;
 	if (!tab)
 		return (NULL);
 	while (s[i])
