@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:09:37 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/13 11:48:48 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/13 17:42:39 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ static char		*ft_strlendup(char *s, size_t len)
 
 static int		count_n_len(int n)
 {
-	int len;
-	int zero;
+	int		len;
+	int		zero;
 
 	len = 0;
 	zero = 0;
@@ -62,8 +62,8 @@ static void		do_conv(char *s, int n)
 
 char			*ft_itoa(int n)
 {
-	int			len;
-	char		*s;
+	int		len;
+	char	*s;
 
 	len = count_n_len(n);
 	if (n == 0)

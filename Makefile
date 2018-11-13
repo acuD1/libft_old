@@ -113,10 +113,10 @@ SRC += $(S_PATH)ft_strtrim.c
 ## Part Bonus
 #SRC += $(S_PATH)ft_lstadd.c
 #SRC += $(S_PATH)ft_lstdel.c
-#SRC += $(S_PATH)ft_lstdelone.c
+SRC += $(S_PATH)ft_lstdelone.c
 #SRC += $(S_PATH)ft_lstiter.c
 #SRC += $(S_PATH)ft_lstmap.c
-#SRC += $(S_PATH)ft_lstnew.c
+SRC += $(S_PATH)ft_lstnew.c
 ## Part my functions
 SRC += $(S_PATH)ft_isspace.c
 SRC += $(S_PATH)ft_strnlen.c

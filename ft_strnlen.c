@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 12:02:20 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/08 13:00:32 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/13 17:45:19 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strnlen(const char *s, size_t len)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (i < len && *s)

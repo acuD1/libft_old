@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:07:56 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/11 16:14:41 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/13 17:43:09 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int		ft_atoi(const char *s)
 {
-	int	i;
-	int	nb;
-	int	sign;
+	int		i;
+	int		nb;
+	int		sign;
 
 	i = 0;
 	nb = 0;

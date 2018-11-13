@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:14:50 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/12 15:44:39 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/13 17:45:27 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	len;
+	int		len;
 
 	len = ft_strlen(s);
 	if (!s)

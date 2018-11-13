@@ -6,8 +6,13 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:10:02 by arsciand          #+#    #+#             */
-/*   Updated: 2018/10/14 19:10:16 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/13 17:41:35 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
+{
+	t_list	*elem;
+}

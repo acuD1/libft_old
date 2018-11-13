@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:14:54 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/13 11:51:09 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/13 17:45:51 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static size_t	count_words(const char *s, char c)
 {
-	size_t n_words;
+	size_t	n_words;
 
 	n_words = 0;
 	while (*s)

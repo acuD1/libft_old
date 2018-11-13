@@ -5,9 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/14 19:10:19 by arsciand          #+#    #+#             */
-/*   Updated: 2018/10/14 19:10:22 by arsciand         ###   ########.fr       */
+/*   Created: 2018/11/13 16:55:46 by arsciand          #+#    #+#             */
+/*   Updated: 2018/11/13 17:39:40 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
+
+void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
+{
+	if (!*alst || !del)
+		return ;
+	del((*alst)->content, (*alst)->content_size);
+	free(*alst);
+	*alst = NULL;
+}

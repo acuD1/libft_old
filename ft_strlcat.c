@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:13:47 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/12 14:44:39 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/13 17:44:56 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 size_t	ft_strlcat(char *dst, const char *s, size_t len)
 {
-	size_t i;
-	size_t dst_len;
-	size_t s_len;
+	size_t	i;
+	size_t	dst_len;
+	size_t	s_len;
 
 	i = 0;
 	dst_len = ft_strlen(dst);
