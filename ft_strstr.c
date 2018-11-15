@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:14:59 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/15 17:12:51 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/15 17:19:48 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@ char	*ft_strstr(const char *s, const char *ndl)
 	i = 0;
 	j = 0;
 	if (!*ndl)
-		return (s);
+		return ((char *)s);
 	while (s[i])
 	{
 		while (ndl[j] && ndl[j] == s[i + j])
 			j++;
 		if (!ndl[j])
-			return (s + i);
+			return ((char *)s + i);
 		j = 0;
 		i++;
 	}
