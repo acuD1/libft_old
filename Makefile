@@ -119,7 +119,7 @@ SRC += $(S_PATH)ft_lstnew.c
 SRC += $(S_PATH)ft_isspace.c
 SRC += $(S_PATH)ft_lstfind.c
 SRC += $(S_PATH)ft_lstmerge.c
-SRC += $(S_PATH)ft_strnlen.c
+SRC += $(S_PATH)ft_lstlen.c
 SRC += $(S_PATH)ft_strrev.c
 
 ##modified for moulinette

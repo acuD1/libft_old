@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnlen.c                                       :+:      :+:    :+:   */
+/*   ft_lstlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/08 12:02:20 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/13 17:45:19 by arsciand         ###   ########.fr       */
+/*   Created: 2018/11/15 16:12:33 by arsciand          #+#    #+#             */
+/*   Updated: 2018/11/15 16:14:25 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strnlen(const char *s, size_t len)
+int		ft_lstlen(t_list *lst)
 {
-	size_t	i;
+	t_list	*link;
+	int		len;
 
-	i = 0;
-	while (i < len && *s)
-		i++;
-	return (i);
+	len = 0;
+	link = lst;
+	if (!lst)
+		return (0);
+	while (link->next)
+	{
+		link = link->next;
+		len++;
+	}
+	return (len + 1);
 }

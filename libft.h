@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 11:08:12 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/15 15:02:50 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/15 16:15:20 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ t_list				*ft_lstnew(void const *content, size_t content_size);
 int					ft_isspace(int c);
 t_list				*ft_lstfind(t_list *lst, void *content_ref, int (*cmp)());
 void				ft_lstmerge(t_list **alst1, t_list *alst2);
-size_t				ft_strnlen(const char *s, size_t len);
+int					ft_lstlen(t_list *lst);
 char				*ft_strrev(char *s);
 
 #endif
