@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 11:08:12 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/13 18:59:54 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/15 15:02:50 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ size_t				ft_strlen(const char *s);
 char				*ft_strncat(char *dst, const char *s, size_t n);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 char				*ft_strncpy(char *dst, const char *s, size_t n);
-char				*ft_strnstr(char *s, const char *ndl, size_t len);
+char				*ft_strnstr(const char *s, const char *ndl, size_t len);
 char				*ft_strstr(char *s, const char *ndl);
 char				*ft_strrchr(const char *s, int c);
 int					ft_tolower(int c);
@@ -104,6 +104,8 @@ t_list				*ft_lstnew(void const *content, size_t content_size);
 */
 
 int					ft_isspace(int c);
+t_list				*ft_lstfind(t_list *lst, void *content_ref, int (*cmp)());
+void				ft_lstmerge(t_list **alst1, t_list *alst2);
 size_t				ft_strnlen(const char *s, size_t len);
 char				*ft_strrev(char *s);
 

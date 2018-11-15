@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 13:00:44 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/09 14:09:43 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/15 15:10:45 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,10 @@
 
 size_t	ft_strlen(const char *s)
 {
-	return (*s ? ft_strlen(++s) + 1 : 0);
+	size_t	len;
+
+	len = 0;
+	while (s[len])
+		len++;
+	return (len);
 }

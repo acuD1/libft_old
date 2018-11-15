@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:12:43 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/09 13:20:14 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/15 09:23:11 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ char	*ft_strchr(const char *s, int c)
 			return ((char*)s);
 		s++;
 	}
-	return (!(char)c ? (char*)&s[ft_strlen(s)] : NULL);
+	return (!(char)c ? (char *)&s[ft_strlen(s)] : NULL);
 }

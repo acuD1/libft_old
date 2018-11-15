@@ -30,15 +30,13 @@ endif
 
 # Color
 
-ifneq ($(USE_COLOR),0)
-  RESET_C = \033[m
-  B_C = \033[0;34m
-  Y_C = \033[0;33m
-  G_C = \033[0;32m
-  R_C = \033[0;31m
-  M_C = \033[0;35m
-  C_C = \033[0;36m
-endif
+RESET_C = \033[m
+B_C = \033[0;34m
+Y_C = \033[0;33m
+G_C = \033[0;32m
+R_C = \033[0;31m
+M_C = \033[0;35m
+C_C = \033[0;36m
 
 # Programms names
 
@@ -119,11 +117,15 @@ SRC += $(S_PATH)ft_lstmap.c
 SRC += $(S_PATH)ft_lstnew.c
 ## Part my functions
 SRC += $(S_PATH)ft_isspace.c
+SRC += $(S_PATH)ft_lstfind.c
+SRC += $(S_PATH)ft_lstmerge.c
 SRC += $(S_PATH)ft_strnlen.c
 SRC += $(S_PATH)ft_strrev.c
 
-OBJ = $(patsubst $(S_PATH)%.c, $(O_PATH)%.o, $(SRC))
-HDR = -I $(H_PATH)
+##modified for moulinette
+##OBJ = $(patsubst $(S_PATH)%.c, $(O_PATH)%.o, $(SRC))
+OBJ = $(patsubst $(S_PATH)%.c, %.o, $(SRC))
+HDR = $(H_PATH)$(HNAME)
 
 # Variables
 
@@ -159,11 +161,14 @@ TESTD = "$(M_C)====>\tTESTS\t\t DONE$(RESET_C)"
 
 # Rules
 
+## This rule is deleted for the moulinette. I need it to print % properly.
 make:
 	$(MSG)
 	@$(MAKE) --no-print-directory all
 
-all: $(BUILD) $(NAME)
+##This rule is modified for the moulinette, may be false.
+##all: $(BUILD) $(NAME)
+all: $(NAME)
 
 $(NAME): $(OBJ)
 	@$(AR_RC) $(NAME) $^
@@ -172,7 +177,12 @@ $(NAME): $(OBJ)
 	@$(ECHO) $(GCIND) $@
 	@$(ECHO) $(GCSUC)
 
-$(OBJ): $(O_PATH)%.o: $(S_PATH)%.c $(H_PATH)libft.h
+##This rule is modified for the moulinette, may be false.
+##$(OBJ): $(O_PATH)%.o: $(S_PATH)%.c $(HDR)
+##	@$(COMPL) $(CFLAG) $< -o $@
+##	@$(ECHO) $(GCFIL) $@
+
+$(OBJ): %.o: %.c $(HDR)
 	@$(COMPL) $(CFLAG) $< -o $@
 	@$(ECHO) $(GCFIL) $@
 
@@ -196,14 +206,16 @@ clean:
 	@$(ECHO) $(RMSHW) $(O_PATH)*.o
 	@$(ECHO) $(CLSUC)
 
+##modified for the moulinette
 fclean:
 	@$(FCRUN)
 	@$(RM_RF) $(OBJ)
-	@$(ECHO) $(RMSHW) $(O_PATH)*.o
-	@$(RM_RF) $(O_PATH)
-	@$(ECHO) $(RMSHW) $(O_PATH)
-	@$(RM_RF) $(B_PATH)
-	@$(ECHO) $(RMSHW) $(B_PATH)
+##	@$(ECHO) $(RMSHW) $(O_PATH)*.o
+	@$(ECHO) $(RMSHW) *.o
+##	@$(RM_RF) $(O_PATH)
+##	@$(ECHO) $(RMSHW) $(O_PATH)
+##	@$(RM_RF) $(B_PATH)
+##	@$(ECHO) $(RMSHW) $(B_PATH)
 	@$(RM_RF) $(NAME)
 	@$(ECHO) $(RMSHW) $(NAME)
 	@$(ECHO) $(FCSUC)

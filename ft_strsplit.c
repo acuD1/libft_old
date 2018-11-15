@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:14:54 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/13 17:45:51 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/15 09:21:14 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char			**ft_strsplit(char const *s, char c)
 	len = 0;
 	if (!c || !s)
 		return (NULL);
-	if (!(tab = (char**)ft_memalloc(sizeof(tab) * (count_words(s, c) + 1))))
+	if (!(tab = (char **)ft_memalloc(sizeof(tab) * (count_words(s, c) + 1))))
 		return (NULL);
 	if (!tab)
 		return (NULL);
