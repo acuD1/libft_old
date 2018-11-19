@@ -6,13 +6,13 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:13:24 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/13 11:48:34 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/19 08:31:46 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+char	*ft_strdup(char const *s)
 {
 	size_t	len;
 	char	*dst;

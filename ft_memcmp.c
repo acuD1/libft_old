@@ -6,13 +6,13 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:11:05 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/15 15:16:47 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/19 08:23:05 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_memcmp(const void *s1, const void *s2, size_t n)
+int		ft_memcmp(void const *s1, void const *s2, size_t n)
 {
 	while (n > 0)
 	{

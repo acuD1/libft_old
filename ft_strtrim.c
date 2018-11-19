@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:15:06 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/13 17:46:10 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/19 08:34:40 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	ft_iswhitespace(int c)
 	return (c == ' ' || c == '\t' || c == '\n' ? 1 : 0);
 }
 
-char		*ft_strtrim(const char *s)
+char		*ft_strtrim(char const *s)
 {
 	size_t	i;
 	size_t	len;

@@ -6,13 +6,13 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:13:47 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/15 15:02:47 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/19 08:32:19 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *s, size_t len)
+size_t	ft_strlcat(char *dst, char const *s, size_t len)
 {
 	size_t	i;
 	size_t	dst_len;

@@ -6,13 +6,13 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 16:03:27 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/15 15:13:22 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/19 08:38:09 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dst, const void *s, int c, size_t n)
+void	*ft_memccpy(void *dst, void const *s, int c, size_t n)
 {
 	while (n > 0)
 	{

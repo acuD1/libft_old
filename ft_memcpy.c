@@ -6,16 +6,16 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:11:10 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/09 09:58:57 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/19 08:40:53 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *s, size_t n)
+void	*ft_memcpy(void *dst, void const *s, size_t n)
 {
 	char		*ptr_dst;
-	const char	*ptr_s;
+	char const	*ptr_s;
 
 	ptr_dst = dst;
 	ptr_s = s;

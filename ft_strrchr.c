@@ -6,13 +6,13 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:14:50 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/15 09:20:59 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/19 08:33:48 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strrchr(char const *s, int c)
 {
 	int		len;
 

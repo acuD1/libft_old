@@ -6,13 +6,13 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:07:56 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/13 17:43:09 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/19 08:21:58 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *s)
+int		ft_atoi(char const *s)
 {
 	int		i;
 	int		nb;

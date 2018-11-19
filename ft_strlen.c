@@ -6,13 +6,13 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 13:00:44 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/15 15:10:45 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/19 08:32:28 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+size_t	ft_strlen(char const *s)
 {
 	size_t	len;
 
