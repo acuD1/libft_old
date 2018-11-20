@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:09:37 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/16 08:48:59 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/20 16:33:32 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static char		*ft_strlendup(char *s, size_t len)
 {
 	char	*dst;
 
-	if (!(dst = (char *)ft_memalloc(sizeof(char) * (len))))
+	if (!(dst = ft_memalloc(len)))
 		return (NULL);
 	ft_strcpy(dst, s);
 	return (dst);

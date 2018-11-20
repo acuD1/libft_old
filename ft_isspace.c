@@ -6,11 +6,9 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 13:09:00 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/12 16:31:44 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/20 15:57:20 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int		ft_isspace(int c)
 {

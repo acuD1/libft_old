@@ -6,11 +6,9 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:13:32 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/13 11:05:25 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/20 16:09:14 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 void	ft_striter(char *s, void (*f)(char *))
 {

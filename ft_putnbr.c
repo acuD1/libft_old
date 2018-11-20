@@ -6,11 +6,10 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:12:12 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/12 16:23:42 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/20 16:01:27 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <unistd.h>
 
 void	ft_putnbr(int n)

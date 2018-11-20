@@ -6,11 +6,10 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:13:14 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/13 11:04:58 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/20 16:03:05 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stdlib.h>
 
 void	ft_strdel(char **as)

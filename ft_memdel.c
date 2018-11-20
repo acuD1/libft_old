@@ -6,11 +6,10 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:11:22 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/13 11:42:56 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/20 15:59:53 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stdlib.h>
 
 void	ft_memdel(void **ap)

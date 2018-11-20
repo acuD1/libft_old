@@ -6,11 +6,9 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:09:29 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/08 11:27:20 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/20 15:57:14 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int		ft_isprint(int c)
 {

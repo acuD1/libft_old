@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:14:05 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/13 11:49:52 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/20 16:59:57 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!s)
 		return (NULL);
 	len = ft_strlen(s);
-	if (!(dst = (char *)ft_memalloc(sizeof(char) * (len + 1))))
+	if (!(dst = ft_memalloc(len + 1)))
 		return (NULL);
 	while (s[i])
 	{

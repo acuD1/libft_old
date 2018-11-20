@@ -6,11 +6,9 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:15:23 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/09 13:29:29 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/20 16:10:34 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int		ft_toupper(int c)
 {

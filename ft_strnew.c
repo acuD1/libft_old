@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:14:38 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/13 17:56:07 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/20 17:12:18 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 char	*ft_strnew(size_t size)
 {
-	return ((char *)ft_memalloc(size + 1));
+	return (ft_memalloc(size + 1));
 }
