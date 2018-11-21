@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:10:02 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/20 16:21:38 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/21 09:39:04 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,11 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 	t_list	*link;
 
 	link = *alst;
-	if (!*alst || !del)
-		return ;
-	while (link)
+	while (*alst)
 	{
-		del(link->content, link->content_size);
-		free(link);
-		link = link->next;
+		link = (*alst)->next;
+		ft_lstdelone(&(*alst), del);
+		*alst = link;
 	}
 	*alst = NULL;
 }

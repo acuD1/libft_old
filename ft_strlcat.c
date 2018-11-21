@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:13:47 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/20 16:14:49 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/21 09:41:21 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ size_t	ft_strlcat(char *dst, char const *s, size_t len)
 	s_len = ft_strlen(s);
 	if (dst_len >= len)
 		return (len + s_len);
-	while (dst[i] && i < len - 1)
+	while (i < len - 1 && dst[i])
 		i++;
 	while (*s && i < len - 1)
 	{
