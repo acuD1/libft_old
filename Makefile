@@ -46,15 +46,14 @@ TNAME = Libft_test
 
 # Dir/Files Path
 
-S_PATH = ./
-H_PATH = ./
+S_PATH = ./srcs/
+H_PATH = ./includes/
 B_PATH = ./build/
 O_PATH = ./build/objs/
 
 
 # Files
 
-## Part I
 SRC += $(S_PATH)ft_atoi.c
 SRC += $(S_PATH)ft_bzero.c
 SRC += $(S_PATH)ft_isalnum.c
@@ -83,7 +82,6 @@ SRC += $(S_PATH)ft_strstr.c
 SRC += $(S_PATH)ft_strrchr.c
 SRC += $(S_PATH)ft_tolower.c
 SRC += $(S_PATH)ft_toupper.c
-## Part II
 SRC += $(S_PATH)ft_itoa.c
 SRC += $(S_PATH)ft_memalloc.c
 SRC += $(S_PATH)ft_memdel.c
@@ -108,29 +106,24 @@ SRC += $(S_PATH)ft_strnew.c
 SRC += $(S_PATH)ft_strsplit.c
 SRC += $(S_PATH)ft_strsub.c
 SRC += $(S_PATH)ft_strtrim.c
-## Part Bonus
 SRC += $(S_PATH)ft_lstadd.c
 SRC += $(S_PATH)ft_lstdel.c
 SRC += $(S_PATH)ft_lstdelone.c
 SRC += $(S_PATH)ft_lstiter.c
 SRC += $(S_PATH)ft_lstmap.c
 SRC += $(S_PATH)ft_lstnew.c
-## Part my functions
 SRC += $(S_PATH)ft_isspace.c
 SRC += $(S_PATH)ft_lstfind.c
 SRC += $(S_PATH)ft_lstmerge.c
 SRC += $(S_PATH)ft_lstlen.c
 SRC += $(S_PATH)ft_strrev.c
-
-##modified for moulinette
-##OBJ = $(patsubst $(S_PATH)%.c, $(O_PATH)%.o, $(SRC))
-OBJ = $(patsubst $(S_PATH)%.c, %.o, $(SRC))
+OBJ = $(patsubst $(S_PATH)%.c, $(O_PATH)%.o, $(SRC))
 HDR = $(H_PATH)$(HNAME)
 
 # Variables
 
 C_GCC = gcc
-COMPL = $(C_GCC) -c
+COMPL = $(C_GCC) -c -I$(H_PATH)
 BUILD = $(B_PATH) $(O_PATH)
 AR_RC = ar rc
 RANLI = ranlib
@@ -161,14 +154,11 @@ TESTD = "$(M_C)====>\tTESTS\t\t DONE$(RESET_C)"
 
 # Rules
 
-## This rule is deleted for the moulinette. I need it to print % properly.
 make:
 	$(MSG)
 	@$(MAKE) --no-print-directory all
 
-##This rule is modified for the moulinette, may be false.
-##all: $(BUILD) $(NAME)
-all: $(NAME)
+all: $(BUILD) $(NAME)
 
 $(NAME): $(OBJ)
 	@$(AR_RC) $(NAME) $^
@@ -177,14 +167,10 @@ $(NAME): $(OBJ)
 	@$(ECHO) $(GCIND) $@
 	@$(ECHO) $(GCSUC)
 
-##This rule is modified for the moulinette, may be false.
-##$(OBJ): $(O_PATH)%.o: $(S_PATH)%.c $(HDR)
-##	@$(COMPL) $(CFLAG) $< -o $@
-##	@$(ECHO) $(GCFIL) $@
-
-$(OBJ): %.o: %.c $(HDR)
+$(OBJ): $(O_PATH)%.o: $(S_PATH)%.c $(HDR)
 	@$(COMPL) $(CFLAG) $< -o $@
 	@$(ECHO) $(GCFIL) $@
+
 
 $(B_PATH):
 	@$(GCRUN)
@@ -206,16 +192,15 @@ clean:
 	@$(ECHO) $(RMSHW) $(O_PATH)*.o
 	@$(ECHO) $(CLSUC)
 
-##modified for the moulinette
 fclean:
 	@$(FCRUN)
 	@$(RM_RF) $(OBJ)
-##	@$(ECHO) $(RMSHW) $(O_PATH)*.o
+	@$(ECHO) $(RMSHW) $(O_PATH)*.o
 	@$(ECHO) $(RMSHW) *.o
-##	@$(RM_RF) $(O_PATH)
-##	@$(ECHO) $(RMSHW) $(O_PATH)
-##	@$(RM_RF) $(B_PATH)
-##	@$(ECHO) $(RMSHW) $(B_PATH)
+	@$(RM_RF) $(O_PATH)
+	@$(ECHO) $(RMSHW) $(O_PATH)
+	@$(RM_RF) $(B_PATH)
+	@$(ECHO) $(RMSHW) $(B_PATH)
 	@$(RM_RF) $(NAME)
 	@$(ECHO) $(RMSHW) $(NAME)
 	@$(ECHO) $(FCSUC)
@@ -225,7 +210,7 @@ test:
 	@git clone -q https://github.com/acuD1/$(TNAME).git $(B_PATH)test
 	@$(ECHO) $(DLSHW) $(TNAME)
 	@echo "$(Y_C)STILL IN BETA : Go to build/test and modify Makefile \
-		manually fear each test_*.c and run make re$(RESET_C)"
+		manually fear each test_*.c and run make re (IF TEST AVAILABLE)$(RESET_C)"
 	@$(ECHO) $(TESTD)
 
 
