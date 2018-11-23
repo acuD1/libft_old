@@ -69,6 +69,7 @@ SRC += $(S_PATH)ft_memmove.c
 SRC += $(S_PATH)ft_memset.c
 SRC += $(S_PATH)ft_strcat.c
 SRC += $(S_PATH)ft_strchr.c
+SRC += $(S_PATH)ft_strclen.c
 SRC += $(S_PATH)ft_strcmp.c
 SRC += $(S_PATH)ft_strcpy.c
 SRC += $(S_PATH)ft_strdup.c
