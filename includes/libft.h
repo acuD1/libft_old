@@ -6,12 +6,15 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 11:08:12 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/23 18:30:41 by arsciand         ###   ########.fr       */
+/*   Updated: 2018/11/28 13:39:02 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+# define BUFF_SIZE 1
+# define FD_MAXSET 4864
 
 # include <string.h>
 
@@ -32,6 +35,7 @@ typedef struct		s_list
 
 int					ft_atoi(char const *s);
 void				ft_bzero(void *s, size_t n);
+int					get_next_line(int const fd, char **line);
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
 int					ft_isascii(int c);

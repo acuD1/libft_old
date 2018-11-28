@@ -56,6 +56,7 @@ O_PATH = ./build/objs/
 
 SRC += $(S_PATH)ft_atoi.c
 SRC += $(S_PATH)ft_bzero.c
+SRC += $(S_PATH)get_next_line.c
 SRC += $(S_PATH)ft_isalnum.c
 SRC += $(S_PATH)ft_isalpha.c
 SRC += $(S_PATH)ft_isascii.c
