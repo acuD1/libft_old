@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 11:08:12 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/28 13:46:39 by arsciand         ###   ########.fr       */
+/*   Updated: 2019/02/14 08:30:04 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ int					ft_lstlen(t_list *lst);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void				ft_lstmerge(t_list **alst1, t_list *alst2);
 t_list				*ft_lstnew(void const *content, size_t content_size);
+void				ft_lstpushback(t_list **begin_list, t_list *new);
 void				*ft_memalloc(size_t size);
 void				*ft_memccpy(void *dst, void const *s, int c, size_t n);
 void				*ft_memchr(void const *s, int c, size_t n);
