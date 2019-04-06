@@ -12,8 +12,6 @@ define MSG
 # **************************************************************************** #
 endef
 
-#
-
 # Progress bar
 
 ifneq ($(words $(MAKECMDGOALS)),1)
