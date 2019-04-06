@@ -73,6 +73,7 @@ SRC += $(S_PATH)ft_lstmap.c
 SRC += $(S_PATH)ft_lstmerge.c
 SRC += $(S_PATH)ft_lstnew.c
 SRC += $(S_PATH)ft_lstpushback.c
+SRC += $(S_PATH)ft_lstrev.c
 SRC += $(S_PATH)ft_memalloc.c
 SRC += $(S_PATH)ft_memccpy.c
 SRC += $(S_PATH)ft_memchr.c
@@ -101,9 +102,11 @@ SRC += $(S_PATH)ft_strequ.c
 SRC += $(S_PATH)ft_striter.c
 SRC += $(S_PATH)ft_striteri.c
 SRC += $(S_PATH)ft_strjoin.c
+SRC += $(S_PATH)ft_strjoin_free.c
 SRC += $(S_PATH)ft_strlcat.c
 SRC += $(S_PATH)ft_strlen.c
 SRC += $(S_PATH)ft_strncat.c
+SRC += $(S_PATH)ft_strnrchr.c
 SRC += $(S_PATH)ft_strncmp.c
 SRC += $(S_PATH)ft_strncpy.c
 SRC += $(S_PATH)ft_strnequ.c
@@ -119,7 +122,7 @@ SRC += $(S_PATH)ft_strsub.c
 SRC += $(S_PATH)ft_strtrim.c
 SRC += $(S_PATH)ft_tolower.c
 SRC += $(S_PATH)ft_toupper.c
-SRC += $(S_PATH)get_next_line.c
+#SRC += $(S_PATH)get_next_line.c Leaks??
 
 # Objects and Headers
 
@@ -161,7 +164,7 @@ TESTD = "$(M_C)====>\tTESTS\t\t DONE$(RESET_C)"
 # Rules
 
 make:
-	$(MSG)
+#	$(MSG)
 	@$(MAKE) --no-print-directory all
 
 all: $(BUILD) $(NAME)
@@ -202,7 +205,6 @@ fclean:
 	@$(FCRUN)
 	@$(RM_RF) $(OBJ)
 	@$(ECHO) $(RMSHW) $(O_PATH)*.o
-	@$(ECHO) $(RMSHW) *.o
 	@$(RM_RF) $(O_PATH)
 	@$(ECHO) $(RMSHW) $(O_PATH)
 	@$(RM_RF) $(B_PATH)

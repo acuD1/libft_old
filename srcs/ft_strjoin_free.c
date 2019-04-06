@@ -1,18 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strjoin_free.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/14 19:08:43 by arsciand          #+#    #+#             */
-/*   Updated: 2019/03/03 11:24:04 by arsciand         ###   ########.fr       */
+/*   Created: 2019/03/05 14:38:35 by arsciand          #+#    #+#             */
+/*   Updated: 2019/03/05 14:41:50 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-void	ft_bzero(void *s, size_t n)
+char	*ft_strjoin_free(char *s1, char *s2, int vars)
 {
-	ft_memset(s, 0, n);
+	char *str;
+
+	str = ft_strjoin(s1, s2);
+	if (vars == 0)
+		return (str);
+	else if (vars == 1)
+		free(s1);
+	else if (vars == 2)
+		free(s2);
+	else
+	{
+		free(s1);
+		free(s2);
+	}
+	return (str);
 }

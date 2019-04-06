@@ -6,14 +6,14 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 11:08:12 by arsciand          #+#    #+#             */
-/*   Updated: 2019/02/14 08:30:04 by arsciand         ###   ########.fr       */
+/*   Updated: 2019/03/16 14:14:32 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# define BUFF_SIZE 1
+# define BUFF_SIZE 4096
 # define FD_MAXSET 4864
 
 # include <string.h>
@@ -48,6 +48,7 @@ void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 t_list				*ft_lstfind(t_list *lst, void *content_ref, int (*cmp)());
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 int					ft_lstlen(t_list *lst);
+void				ft_lstrev(t_list **alst);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void				ft_lstmerge(t_list **alst1, t_list *alst2);
 t_list				*ft_lstnew(void const *content, size_t content_size);
@@ -80,9 +81,11 @@ int					ft_strequ(char const *s1, char const *s2);
 void				ft_striter(char *s, void (*f)(char *));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_strjoin_free(char *s1, char *s2, int vars);
 size_t				ft_strlcat(char *dst, char const *s, size_t len);
 size_t				ft_strlen(char const *s);
 char				*ft_strncat(char *dst, char const *s, size_t n);
+int					ft_strnrchr(char const *s, char c);
 int					ft_strncmp(char const *s1, char const *s2, size_t n);
 char				*ft_strncpy(char *dst, char const *s, size_t n);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);

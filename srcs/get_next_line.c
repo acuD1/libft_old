@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 18:50:58 by arsciand          #+#    #+#             */
-/*   Updated: 2019/02/14 08:30:48 by arsciand         ###   ########.fr       */
+/*   Updated: 2019/02/22 09:23:38 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,5 @@ int			get_next_line(int const fd, char **line)
 			ft_strdel(&stack[fd]);
 		return (1);
 	}
-	free(stack[fd]);
 	return (0);
 }

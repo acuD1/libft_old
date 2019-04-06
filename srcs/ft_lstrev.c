@@ -1,18 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/14 19:08:43 by arsciand          #+#    #+#             */
-/*   Updated: 2019/03/03 11:24:04 by arsciand         ###   ########.fr       */
+/*   Created: 2019/03/09 14:40:50 by arsciand          #+#    #+#             */
+/*   Updated: 2019/03/09 14:42:12 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_lstrev(t_list **alst)
 {
-	ft_memset(s, 0, n);
+	t_list *current;
+	t_list *next;
+	t_list *prev;
+
+	current = *alst;
+	next = NULL;
+	prev = NULL;
+	while (current)
+	{
+		next = current->next;
+		current->next = prev;
+		prev = current;
+		current = next;
+	}
+	*alst = prev;
 }
