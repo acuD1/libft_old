@@ -1,2 +1,3 @@
 Libft project - arsciand @ 42
- | Grade 125/125 |
+
+Some libc functions and more...

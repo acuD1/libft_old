@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 11:08:12 by arsciand          #+#    #+#             */
-/*   Updated: 2019/03/16 14:14:32 by arsciand         ###   ########.fr       */
+/*   Updated: 2019/04/06 11:45:12 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,16 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct		s_mprintf
+{
+		int			pad;
+		int			indent;
+		int			width;
+		int			neg;
+		int			diff;
+		int			space;
+}					t_mprintf;
 
 /*
 **		Fonctions
@@ -102,5 +112,9 @@ char				*ft_strtrim(char const *s);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
 int					get_next_line(int const fd, char **line);
+void            	ft_mprintf(int fd, const char *str, ...);
+int					buff_fill_int(int arg, char *buff, t_mprintf *s_mpf);
+int					buff_fill_char(int arg, char *buff, t_mprintf *s_mpf);
+int					buff_fill_str(char *arg, char *buff, t_mprintf *s_mpf);
 
 #endif

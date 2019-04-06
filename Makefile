@@ -46,10 +46,12 @@ TNAME = Libft_test
 
 # Dir/Files Path
 
-S_PATH = ./srcs/
-H_PATH = ./includes/
-B_PATH = ./build/
-O_PATH = ./build/objs/
+S_PATH = srcs/
+H_PATH = includes/
+B_PATH = build/
+O_PATH = build/objs/
+
+P_PATH = build/objs/ft_mprintf/
 
 
 # Files
@@ -122,7 +124,10 @@ SRC += $(S_PATH)ft_strsub.c
 SRC += $(S_PATH)ft_strtrim.c
 SRC += $(S_PATH)ft_tolower.c
 SRC += $(S_PATH)ft_toupper.c
-#SRC += $(S_PATH)get_next_line.c Leaks??
+SRC += $(S_PATH)get_next_line.c
+SRC += $(S_PATH)ft_mprintf/ft_mprintf.c
+SRC += $(S_PATH)ft_mprintf/ft_mprintf_tools.c
+
 
 # Objects and Headers
 
@@ -133,7 +138,7 @@ HDR = $(H_PATH)$(HNAME)
 
 C_GCC = gcc
 COMPL = $(C_GCC) -c -I$(H_PATH)
-BUILD = $(B_PATH) $(O_PATH)
+BUILD = $(B_PATH) $(O_PATH) $(P_PATH)
 AR_RC = ar rc
 RANLI = ranlib
 CFLAG = -Wall -Wextra -Werror
@@ -190,6 +195,10 @@ $(O_PATH):
 	@$(MKDIR) $(O_PATH)
 	@$(ECHO) $(MKSHW) $(O_PATH)
 
+$(P_PATH):
+	@$(MKDIR) $(P_PATH)
+	@$(ECHO) $(MKSHW) $(P_PATH)
+
 norme:
 	@$(NORMR)
 	@$(NORME) $(SRC) $(H_PATH)$(HNAME)
@@ -203,6 +212,8 @@ clean:
 
 fclean:
 	@$(FCRUN)
+	@$(RM_RF) $(P_PATH)
+	@$(ECHO) $(RMSHW) $(P_PATH)
 	@$(RM_RF) $(OBJ)
 	@$(ECHO) $(RMSHW) $(O_PATH)*.o
 	@$(RM_RF) $(O_PATH)
