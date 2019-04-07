@@ -53,6 +53,9 @@ O_PATH = build/objs/
 
 P_PATH = build/objs/ft_mprintf/
 
+PATHS = $(P_PATH) $(O_PATH) $(B_PATH)
+OBJP = "$(O_PATH){core,db,misc}*.o"
+
 
 # Files
 
@@ -138,7 +141,7 @@ HDR = $(H_PATH)$(HNAME)
 
 C_GCC = gcc
 COMPL = $(C_GCC) -c -I$(H_PATH)
-BUILD = $(B_PATH) $(O_PATH) $(P_PATH)
+BUILD = $(PATHS)
 AR_RC = ar rc
 RANLI = ranlib
 CFLAG = -Wall -Wextra -Werror
@@ -185,19 +188,10 @@ $(OBJ): $(O_PATH)%.o: $(S_PATH)%.c $(HDR)
 	@$(COMPL) $(CFLAG) $< -o $@
 	@$(ECHO) $(GCFIL) $@
 
-
-$(B_PATH):
+$(PATHS):
 	@$(GCRUN)
-	@$(MKDIR) $(B_PATH)
-	@$(ECHO) $(MKSHW) $(B_PATH)
-
-$(O_PATH):
-	@$(MKDIR) $(O_PATH)
-	@$(ECHO) $(MKSHW) $(O_PATH)
-
-$(P_PATH):
-	@$(MKDIR) $(P_PATH)
-	@$(ECHO) $(MKSHW) $(P_PATH)
+	@$(MKDIR) $(PATHS)
+	@$(foreach var,$(PATHS), $(ECHO) $(MKSHW) $(var);)
 
 norme:
 	@$(NORMR)
@@ -212,14 +206,13 @@ clean:
 
 fclean:
 	@$(FCRUN)
-	@$(RM_RF) $(P_PATH)
-	@$(ECHO) $(RMSHW) $(P_PATH)
 	@$(RM_RF) $(OBJ)
-	@$(ECHO) $(RMSHW) $(O_PATH)*.o
-	@$(RM_RF) $(O_PATH)
-	@$(ECHO) $(RMSHW) $(O_PATH)
-	@$(RM_RF) $(B_PATH)
-	@$(ECHO) $(RMSHW) $(B_PATH)
+	@$(ECHO) $(RMSHW) $(OBJP)
+	@$(RM_RF) $(PATHS)
+	@for x in $(PATHS);\
+		do\
+			$(ECHO) $(RMSHW) $$x;\
+	done
 	@$(RM_RF) $(NAME)
 	@$(ECHO) $(RMSHW) $(NAME)
 	@$(ECHO) $(FCSUC)
