@@ -25,7 +25,8 @@ T := $(shell $(MAKE) $(MAKECMDGOALS) --no-print-directory \
 	  ECHO="OutputPrintable" | grep -c "OutputPrintable")
 N := x
 C = $(words $N)$(eval N := x $N)
-ECHO = echo "`expr "   [\`expr $C '*' 100 / $T\`" : '.*\(....\)$$'`%]"
+V = "`expr "   [\`expr $C '*' 100 / $T\`" : '.*\(....\)$$'`%]"
+ECHO = printf "\e[1A\r%s %s %s                                      \n" $V
 endif
 
 # Color
@@ -36,7 +37,7 @@ Y_C = \033[0;33m
 G_C = \033[0;32m
 R_C = \033[0;31m
 M_C = \033[0;35m
-C_C = \033[0;36m
+C_C = \033[0;36
 
 # Programms names
 
@@ -148,24 +149,22 @@ CFLAG = -Wall -Wextra -Werror
 RM_RF = /bin/rm -rf
 MKDIR = mkdir -p
 NORME = norminette
-GCFIL = "\t- >\tCompiling\t-"
-GCLAR = "\t- }\tArchiving\t-"
-GCLIN = "\t- =t\Linking\t-"
-GCIND = "\t- *\tIndexing\t-"
-RMSHW = "\t- -\tRemoving\t-"
-MKSHW = "\t- +\tCreating\t-"
-DLSHW = "\t- ~\tDownloading\t-"
-EXSHW = "\t- .\tExecuting\t-"
-GCRUN = echo "$(G_C)===========>\tCompilation\t RUNNING$(RESET_C)"
-GCSUC = "$(G_C)====>\tCompilation\t SUCCESS$(RESET_C)"
-CLRUN = echo "$(R_C)===========>\tCleanup\t\t RUNNING$(RESET_C)"
-CLSUC = "$(R_C)====>\tCleanup\t\t SUCCESS$(RESET_C)"
-FCRUN = echo "$(R_C)===========>\tForce Cleanup\t RUNNING$(RESET_C)"
-FCSUC = "$(R_C)====>\tForce Cleanup\t SUCCESS$(RESET_C)"
-NORMR = echo "$(Y_C)===========>\tNorminette\t RUNNING$(RESET_C)"
-NORMD = "$(G_C)====>\tNorminette\t DONE$(RESET_C)"
-TESTR = echo "$(M_C)===========>\tTESTS\t\t RUNNING$(RESET_C)"
-TESTD = "$(M_C)====>\tTESTS\t\t DONE$(RESET_C)"
+SLEEP = sleep 0.01
+GCFIL = "	- >	  Compiling		-"
+GCLAR = "	- }	  Archiving		-"
+GCLIN = "	- =	  Linking		-"
+GCIND = "	- *	  Indexing		-"
+RMSHW = "	- -	  Removing		-"
+MKSHW = "	- +	  Creating		-"
+DLSHW = "	- ~	  Downloading		-"
+EXSHW = "	- .	  Executing		-"
+GCRUN = echo ">\n$(G_C)---------->\tCompiling$(RESET_C)\n"
+CLRUN = echo ">\n$(R_C)---------->\tCleaning$(RESET_C)\n"
+FCRUN = echo ">\n$(R_C)---------->\tForce Cleaning$(RESET_C)\n"
+NORMR = echo ">\n$(Y_C)---------->\tNorminette$(RESET_C)\n"
+GCSUC = echo "$(G_C)==========>\tSUCCESS$(RESET_C)"
+CLSUC = echo "$(R_C)==========>\tDONE$(RESET_C)"
+NORMD = echo "$(G_C)==========>\t\DONE$(RESET_C)"
 
 .PHONY: all norme clean fclean re test
 
@@ -178,53 +177,39 @@ make:
 all: $(BUILD) $(NAME)
 
 $(NAME): $(OBJ)
+	@$(SLEEP)
 	@$(AR_RC) $(NAME) $^
 	@$(ECHO) $(GCLAR) $@
 	@$(RANLI) $(NAME)
 	@$(ECHO) $(GCIND) $@
-	@$(ECHO) $(GCSUC)
+	@$(GCSUC)
 
 $(OBJ): $(O_PATH)%.o: $(S_PATH)%.c $(HDR)
 	@$(COMPL) $(CFLAG) $< -o $@
-	@$(ECHO) $(GCFIL) $@
+	@$(ECHO) $(GCFIL) $<
 
 $(PATHS):
-	@$(GCRUN)
+	@$(GCRUN) $(SLEEP)
 	@$(MKDIR) $(PATHS)
 	@$(foreach var,$(PATHS), $(ECHO) $(MKSHW) $(var);)
 
 norme:
 	@$(NORMR)
 	@$(NORME) $(SRC) $(H_PATH)$(HNAME)
-	@$(ECHO) $(NORMD)
+	@$(NORMD)
 
 clean:
 	@$(CLRUN)
-	@$(RM_RF) $(OBJ)
-	@$(ECHO) $(RMSHW) $(O_PATH)*.o
-	@$(ECHO) $(CLSUC)
+	@for i in $(OBJ); do $(RM_RF) $$i; $(ECHO) $(RMSHW) $$i; done
+	@$(CLSUC)
 
 fclean:
 	@$(FCRUN)
-	@$(RM_RF) $(OBJ)
-	@$(ECHO) $(RMSHW) $(OBJP)
-	@$(RM_RF) $(PATHS)
-	@for x in $(PATHS);\
-		do\
-			$(ECHO) $(RMSHW) $$x;\
-	done
+	@for i in $(OBJ); do $(RM_RF) $$i; $(ECHO) $(RMSHW) $$i; done
+	@for i in $(PATHS); do $(RM_RF) $$i; $(ECHO) $(RMSHW) $$i; done
 	@$(RM_RF) $(NAME)
 	@$(ECHO) $(RMSHW) $(NAME)
-	@$(ECHO) $(FCSUC)
-
-test:
-	@$(TESTR)
-	@git clone -q https://github.com/acuD1/$(TNAME).git $(B_PATH)test
-	@$(ECHO) $(DLSHW) $(TNAME)
-	@echo "$(Y_C)STILL IN BETA : Go to build/test and modify Makefile \
-		manually fear each test_*.c and run make re (IF TEST AVAILABLE)$(RESET_C)"
-	@$(ECHO) $(TESTD)
-
+	@$(CLSUC)
 
 re:
 	@$(MAKE) --no-print-directory fclean all
