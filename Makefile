@@ -150,21 +150,14 @@ RM_RF = /bin/rm -rf
 MKDIR = mkdir -p
 NORME = norminette
 SLEEP = sleep 0.01
-GCFIL = "	- >	  Compiling		-"
-GCLAR = "	- }	  Archiving		-"
-GCLIN = "	- =	  Linking		-"
-GCIND = "	- *	  Indexing		-"
-RMSHW = "	- -	  Removing		-"
-MKSHW = "	- +	  Creating		-"
-DLSHW = "	- ~	  Downloading		-"
-EXSHW = "	- .	  Executing		-"
+GCFIL = "	- >	Compiling		-"
+GCLAR = "	- }	Archiving		-"
+RMSHW = "	- -	Removing		-"
+MKSHW = "	- +	Creating		-"
 GCRUN = echo ">\n$(G_C)---------->\tCompiling$(RESET_C)\n"
 CLRUN = echo ">\n$(R_C)---------->\tCleaning$(RESET_C)\n"
-FCRUN = echo ">\n$(R_C)---------->\tForce Cleaning$(RESET_C)\n"
+FCRUN = echo ">\n$(R_C)---------->\tForce cleaning$(RESET_C)\n"
 NORMR = echo ">\n$(Y_C)---------->\tNorminette$(RESET_C)\n"
-GCSUC = echo "$(G_C)==========>\tSUCCESS$(RESET_C)"
-CLSUC = echo "$(R_C)==========>\tDONE$(RESET_C)"
-NORMD = echo "$(G_C)==========>\t\DONE$(RESET_C)"
 
 .PHONY: all norme clean fclean re test
 
@@ -181,15 +174,14 @@ $(NAME): $(OBJ)
 	@$(AR_RC) $(NAME) $^
 	@$(ECHO) $(GCLAR) $@
 	@$(RANLI) $(NAME)
-	@$(ECHO) $(GCIND) $@
-	@$(GCSUC)
 
 $(OBJ): $(O_PATH)%.o: $(S_PATH)%.c $(HDR)
 	@$(COMPL) $(CFLAG) $< -o $@
 	@$(ECHO) $(GCFIL) $<
 
 $(PATHS):
-	@$(GCRUN) $(SLEEP)
+	@$(SLEEP)
+	@$(GCRUN)
 	@$(MKDIR) $(PATHS)
 	@$(foreach var,$(PATHS), $(ECHO) $(MKSHW) $(var);)
 
@@ -201,7 +193,6 @@ norme:
 clean:
 	@$(CLRUN)
 	@for i in $(OBJ); do $(RM_RF) $$i; $(ECHO) $(RMSHW) $$i; done
-	@$(CLSUC)
 
 fclean:
 	@$(FCRUN)
@@ -209,7 +200,6 @@ fclean:
 	@for i in $(PATHS); do $(RM_RF) $$i; $(ECHO) $(RMSHW) $$i; done
 	@$(RM_RF) $(NAME)
 	@$(ECHO) $(RMSHW) $(NAME)
-	@$(CLSUC)
 
 re:
 	@$(MAKE) --no-print-directory fclean all
