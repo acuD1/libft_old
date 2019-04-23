@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 18:50:58 by arsciand          #+#    #+#             */
-/*   Updated: 2019/04/13 12:03:11 by arsciand         ###   ########.fr       */
+/*   Updated: 2019/04/23 15:00:48 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	check_line(char **stack)
 	return (1);
 }
 
-static int	init(int const fd, char **line, char *buff, char **stack)
+static int	init(const int fd, char **line, char *buff, char **stack)
 {
 	if (fd == -1 || FD_MAXSET > 4864 || BUFF_SIZE < 1
 			|| !line || read(fd, buff, 0))
@@ -38,7 +38,7 @@ static int	init(int const fd, char **line, char *buff, char **stack)
 	return (1);
 }
 
-int			get_next_line(int const fd, char **line)
+int			get_next_line(const int fd, char **line)
 {
 	static char	*stack[FD_MAXSET];
 	char		*buff;

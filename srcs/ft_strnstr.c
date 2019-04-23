@@ -6,13 +6,13 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:14:47 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/20 16:16:59 by arsciand         ###   ########.fr       */
+/*   Updated: 2019/04/23 14:27:07 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(char const *s, char const *to_find, size_t len)
+char	*ft_strnstr(const char *s, const char *to_find, size_t len)
 {
 	size_t	i;
 	char	*s_c;

@@ -6,14 +6,14 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 17:50:29 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/20 16:22:12 by arsciand         ###   ########.fr       */
+/*   Updated: 2019/04/23 14:36:07 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-t_list	*ft_lstnew(void const *content, size_t content_size)
+t_list	*ft_lstnew(const void *content, size_t content_size)
 {
 	t_list	*link;
 	void	*elem_cpy;

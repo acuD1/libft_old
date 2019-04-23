@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/05 14:38:35 by arsciand          #+#    #+#             */
-/*   Updated: 2019/03/05 14:41:50 by arsciand         ###   ########.fr       */
+/*   Updated: 2019/04/23 15:00:21 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 char	*ft_strjoin_free(char *s1, char *s2, int vars)
 {
-	char *str;
+	char	*str;
 
 	str = ft_strjoin(s1, s2);
 	if (vars == 0)

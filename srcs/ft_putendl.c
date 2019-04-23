@@ -6,14 +6,14 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:12:03 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/20 16:18:37 by arsciand         ###   ########.fr       */
+/*   Updated: 2019/04/23 12:42:23 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
 
-void	ft_putendl(char const *s)
+void	ft_putendl(const char *s)
 {
 	if (s)
 	{

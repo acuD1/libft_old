@@ -6,19 +6,18 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:11:26 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/20 16:13:21 by arsciand         ###   ########.fr       */
+/*   Updated: 2019/04/23 14:40:52 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, void const *s, size_t len)
+void	*ft_memmove(void *dst, const void *s, size_t len)
 {
 	unsigned char	tmp[len];
 
 	if (len >= 134217728)
 		return (NULL);
-	ft_memcpy(tmp, s, len);
-	dst = ft_memcpy(dst, tmp, len);
+	dst = ft_memcpy(dst, ft_memcpy(tmp, s, len), len);
 	return (dst);
 }

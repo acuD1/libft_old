@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:11:31 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/20 16:13:29 by arsciand         ###   ########.fr       */
+/*   Updated: 2019/04/23 10:17:34 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	*ft_memset(void *s, int c, size_t len)
 {
-	unsigned char	*ptr_s;
+	unsigned char	*tmp;
 
-	ptr_s = s;
+	tmp = s;
 	while (len--)
-		*(ptr_s)++ = (unsigned char)c;
+		*tmp++ = (unsigned char)c;
 	return (s);
 }

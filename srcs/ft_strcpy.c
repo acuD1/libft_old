@@ -6,13 +6,13 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:13:06 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/20 16:02:51 by arsciand         ###   ########.fr       */
+/*   Updated: 2019/04/23 14:18:44 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-char	*ft_strcpy(char *dst, char const *s)
+char	*ft_strcpy(char *dst, const char *s)
 {
 	size_t	i;
 

@@ -3,18 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arsciand <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 14:02:26 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/23 14:02:35 by arsciand         ###   ########.fr       */
+/*   Updated: 2019/04/23 12:39:51 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(char const *s)
+#include "unistd.h"
+
+int		ft_atoi(const char *s)
 {
-	int		i;
-	int		nb;
+	size_t	i;
 	int		sign;
+	int		nb;
 
 	i = 0;
 	nb = 0;
@@ -24,6 +26,6 @@ int		ft_atoi(char const *s)
 	if (s[i] == '+' || s[i] == '-')
 		sign *= (s[i++] == '-' ? -1 : 1);
 	while (s[i] >= '0' && s[i] <= '9')
-		nb = (nb * 10) + (s[i++] - 48);
+		nb = (nb * 10) + (s[i++] - '0');
 	return (sign * nb);
 }

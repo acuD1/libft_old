@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 16:12:33 by arsciand          #+#    #+#             */
-/*   Updated: 2018/11/20 16:21:58 by arsciand         ###   ########.fr       */
+/*   Updated: 2019/04/23 14:57:58 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int		ft_lstlen(t_list *lst)
 {
 	t_list	*link;
-	int		len;
+	size_t	len;
 
 	len = 0;
 	link = lst;
