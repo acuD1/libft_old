@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 18:50:58 by arsciand          #+#    #+#             */
-/*   Updated: 2019/04/23 15:00:48 by arsciand         ###   ########.fr       */
+/*   Updated: 2019/05/05 15:56:37 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int			get_next_line(const int fd, char **line)
 	{
 		buff[ret] = '\0';
 		tmp = stack[fd];
-		stack[fd] = ft_strjoin_free(tmp, buff, 1);
+		stack[fd] = ft_strjoinf(tmp, buff, 1);
 	}
 	free(buff);
 	*line = ft_strsub(stack[fd], 0, ft_strclen(stack[fd], '\n'));

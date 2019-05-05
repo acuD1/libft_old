@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 11:08:12 by arsciand          #+#    #+#             */
-/*   Updated: 2019/04/23 15:39:39 by arsciand         ###   ########.fr       */
+/*   Updated: 2019/05/05 15:56:03 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ int					ft_strequ(const char *s1, const char *s2);
 void				ft_striter(char *s, void (*f)(char *));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_strjoin(const char *s1, const char *s2);
-char				*ft_strjoin_free(char *s1, char *s2, int vars);
+char				*ft_strjoinf(char *s1, char *s2, int vars);
 size_t				ft_strlcat(char *dst, const char *s, size_t len);
 size_t				ft_strlen(const char *s);
 char				*ft_strncat(char *dst, const char *s, size_t n);
