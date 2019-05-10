@@ -62,6 +62,7 @@ OBJP = "$(O_PATH){core,db,misc}*.o"
 
 SRC += $(S_PATH)ft_atoi.c
 SRC += $(S_PATH)ft_bzero.c
+SRC += $(S_PATH)ft_free_tab.c
 SRC += $(S_PATH)ft_isalnum.c
 SRC += $(S_PATH)ft_isalpha.c
 SRC += $(S_PATH)ft_isascii.c

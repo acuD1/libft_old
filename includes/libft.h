@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 11:08:12 by arsciand          #+#    #+#             */
-/*   Updated: 2019/05/05 15:56:03 by arsciand         ###   ########.fr       */
+/*   Updated: 2019/05/10 15:13:58 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ typedef struct		s_mprintf
 
 int					ft_atoi(const char *s);
 void				ft_bzero(void *s, size_t n);
+void				ft_free_tab(char ***tab);
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
 int					ft_isascii(int c);
