@@ -6,24 +6,24 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:14:54 by arsciand          #+#    #+#             */
-/*   Updated: 2019/04/23 14:56:44 by arsciand         ###   ########.fr       */
+/*   Updated: 2019/05/11 10:45:15 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	count_words(const char *s, char c)
+static size_t	count_words(const char *s, char *charset)
 {
 	size_t	n_words;
 
 	n_words = 0;
 	while (*s)
 	{
-		if (*s == c)
+		if (ft_strchr(charset, *s))
 			s++;
 		else
 		{
-			while (*s != c && *s)
+			while (!(ft_strchr(charset, *s)) && *s)
 				s++;
 			n_words++;
 		}
@@ -31,7 +31,7 @@ static size_t	count_words(const char *s, char c)
 	return (n_words);
 }
 
-char			**ft_strsplit(const char *s, char c)
+char			**ft_strsplit(const char *s, char *charset)
 {
 	size_t	i;
 	size_t	len;
@@ -41,18 +41,21 @@ char			**ft_strsplit(const char *s, char c)
 	i = 0;
 	j = 0;
 	len = 0;
-	if (!c || !s)
+	if (!charset || !s)
 		return (NULL);
-	if (!(tab = ft_memalloc(sizeof(tab) * (count_words(s, c) + 1))))
+	if (!(tab = ft_memalloc(sizeof(tab) * (count_words(s, charset) + 1))))
 		return (NULL);
 	if (!tab)
 		return (NULL);
 	while (s[i])
 	{
-		while (s[i + len] && s[i + len] != c)
+		while (s[i + len] && !(ft_strchr(charset, s[i + len])))
 			len++;
 		if (len)
-			tab[j++] = ft_strsub(s, i, len);
+		{
+			tab[j] = ft_strsub(s, i, len);
+			j++;
+		}
 		i += len ? len : 1;
 		len = 0;
 	}
