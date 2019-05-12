@@ -127,6 +127,7 @@ SRC += $(S_PATH)ft_strsplit.c
 SRC += $(S_PATH)ft_strstr.c
 SRC += $(S_PATH)ft_strsub.c
 SRC += $(S_PATH)ft_strtrim.c
+SRC += $(S_PATH)ft_tablen.c
 SRC += $(S_PATH)ft_tolower.c
 SRC += $(S_PATH)ft_toupper.c
 SRC += $(S_PATH)get_next_line.c

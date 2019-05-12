@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 11:08:12 by arsciand          #+#    #+#             */
-/*   Updated: 2019/05/11 10:45:37 by arsciand         ###   ########.fr       */
+/*   Updated: 2019/05/12 15:08:33 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,6 +110,7 @@ char				**ft_strsplit(const char *s, char *charset);
 char				*ft_strstr(const char *s, const char *ndl);
 char				*ft_strsub(const char *s, unsigned int start, size_t len);
 char				*ft_strtrim(const char *s);
+size_t				ft_tablen(char **tab);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
 int					get_next_line(const int fd, char **line);
