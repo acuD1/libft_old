@@ -6,13 +6,13 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 18:50:58 by arsciand          #+#    #+#             */
-/*   Updated: 2019/06/01 17:35:07 by arsciand         ###   ########.fr       */
+/*   Updated: 2019/06/02 13:59:10 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "unistd.h"
-#include "stdlib.h"
+#include <unistd.h>
+#include <stdlib.h>
 
 static int	check_line(char **stack)
 {
@@ -27,26 +27,22 @@ static int	check_line(char **stack)
 	return (1);
 }
 
-static int	init(int const fd, char **line, char *buff, char **stack)
+static int	init(int const fd, char **line, char **stack)
 {
 	if (fd == -1 || FD_MAXSET > 4864 || BUFF_SIZE < 1 || !line
-			|| (read(fd, buff, 0) == -1)
 			|| (!(stack[fd]) && !(stack[fd] = ft_strnew(0))))
-	{
-		ft_strdel(&buff);
 		return (0);
-	}
 	return (1);
 }
 
 int			get_next_line(int const fd, char **line)
 {
 	static char	*stack[FD_MAXSET];
-	char		*buff;
+	char		buff[BUFF_SIZE + 1];
 	char		*tmp;
 	int			ret;
 
-	if (!(buff = ft_memalloc(BUFF_SIZE + 1)) || (!init(fd, line, buff, stack)))
+	if ((read(fd, buff, 0) == -1) || !(init(fd, line, stack)))
 		return (-1);
 	while (!(check_line(&stack[fd])) && (ret = read(fd, buff, BUFF_SIZE)))
 	{
@@ -54,16 +50,14 @@ int			get_next_line(int const fd, char **line)
 		tmp = stack[fd];
 		stack[fd] = ft_strjoinf(tmp, buff, 1);
 	}
-	ft_strdel(&buff);
+	ft_bzero(buff, BUFF_SIZE);
 	*line = ft_strsub(stack[fd], 0, ft_strclen(stack[fd], '\n'));
 	if (*stack[fd])
 	{
 		if (check_line(&stack[fd]))
 			ft_strcpy(stack[fd], ft_strchr(stack[fd], '\n') + 1);
-		else
-			ft_strdel(&stack[fd]);
+		ft_strdel(&stack[fd]);
 		return (1);
 	}
-	ft_strdel(&stack[fd]);
 	return (0);
 }
