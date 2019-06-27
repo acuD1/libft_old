@@ -6,7 +6,7 @@
 /*   By: arsciand <arsciand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/14 19:14:54 by arsciand          #+#    #+#             */
-/*   Updated: 2019/05/11 10:45:15 by arsciand         ###   ########.fr       */
+/*   Updated: 2019/06/27 17:09:57 by arsciand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,10 +52,7 @@ char			**ft_strsplit(const char *s, char *charset)
 		while (s[i + len] && !(ft_strchr(charset, s[i + len])))
 			len++;
 		if (len)
-		{
-			tab[j] = ft_strsub(s, i, len);
-			j++;
-		}
+			tab[j++] = ft_strsub(s, i, len);
 		i += len ? len : 1;
 		len = 0;
 	}
